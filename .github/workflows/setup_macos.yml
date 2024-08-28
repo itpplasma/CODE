@@ -1,0 +1,16 @@
+name: Setup development environment on MacOS
+
+# Trigger the workflow on push to main branch
+on:
+  push:
+    branches:
+      - actions
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Run script
+        run: |
+          echo "Installing Homebrew"
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
